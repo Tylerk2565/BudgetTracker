@@ -1,0 +1,103 @@
+$primary-color: #f4f4f4;
+$red-btn: #dc3545;
+$green-btn: #28a745;
+
+@mixin bg-blue-gradient($angle: 180deg, $start-color: #00aaff, $end-color: #0044cc) {
+  background: linear-gradient($angle, $start-color, $end-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  @include bg-blue-gradient(180deg, #00aaff, #0044cc);
+}
+
+.budget-tracker-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: $primary-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  input, button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  input {
+    width: 70%;
+  }
+
+  button {
+    width: 25%;
+    background-color: $green-btn;
+    color: $primary-color;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $green-btn;
+    }
+  }
+}
+
+.totals-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: $primary-color;
+  border-radius: 5px;
+
+  div {
+    font-size: 18px;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: $primary-color;
+    margin-bottom: 10px;
+    border-left: 5px solid;
+
+    &.income {
+      border-color: $green-btn;
+    }
+
+    &.expense {
+      border-color: $red-btn;
+    }
+
+    span {
+      font-size: 16px;
+    }
+
+    .delete-btn {
+      border: none;
+      color: $red-btn;
+      cursor: pointer;
+    }
+  }
+}

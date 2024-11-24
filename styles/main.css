@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(180deg, #00aaff, #0044cc);
+}
+
+.budget-tracker-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.input-field input, .input-field button {
+  padding: 10px;
+  font-size: 16px;
+}
+.input-field input {
+  width: 70%;
+}
+.input-field button {
+  width: 25%;
+  background-color: #28a745;
+  color: #f4f4f4;
+  border: none;
+  cursor: pointer;
+}
+.input-field button:hover {
+  background-color: #28a745;
+}
+
+.totals-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+.totals-container div {
+  font-size: 18px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+.list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f4f4f4;
+  margin-bottom: 10px;
+  border-left: 5px solid;
+}
+.list li.income {
+  border-color: #28a745;
+}
+.list li.expense {
+  border-color: #dc3545;
+}
+.list li span {
+  font-size: 16px;
+}
+.list li .delete-btn {
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
